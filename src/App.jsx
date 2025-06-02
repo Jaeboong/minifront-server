@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './User/Login';
-import Signup from './User/Signup';
+import Login from './user/Login';
+import Signup from './user/Signup';
 import Dashboard from './Mypage/Dashboard';
 import EditInfo from './Mypage/EditInfo';
 import PrivateRoute from './routes/PrivateRoute'; // 반드시 생성 필요!
@@ -9,7 +9,7 @@ export default function App() {
   console.log('앱 렌더링');
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/minifront-server">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
