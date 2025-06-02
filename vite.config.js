@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   base: '/minifront-server/',
-  plugins: [react()]
+  plugins: [react()],
+  define: {
+    'process.env.PUBLIC_URL': '"/minifront-server"'
+  }
 });
